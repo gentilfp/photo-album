@@ -17,6 +17,5 @@ class Photo
   validates_presence_of :title
   validates_presence_of :description
 
-  has n, :comments, dependent: :destroy
-
+  has n, :comments, constraint: :destroy
 end
