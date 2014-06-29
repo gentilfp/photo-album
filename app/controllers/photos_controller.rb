@@ -36,7 +36,7 @@ class PhotosController < ApplicationController
     @photo = Photo.get(params[:id])
     respond_to do |format|
       if @photo.update(params[:photo])
-        format.html { redirect_to photos_path, notice: t('photos.successfully_updated') }
+        format.html { redirect_to photo_path @photo, notice: t('photos.successfully_updated') }
       else
         format.html { redirect_to edit_photo_path @photo, notice: t('photos.error_on_editing') }
       end
