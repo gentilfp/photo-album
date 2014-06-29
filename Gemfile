@@ -7,6 +7,7 @@ gem 'rails', '4.0.6'
 gem 'less-rails'
 gem 'jquery-rails'
 gem 'therubyracer', platforms: :ruby
+gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 # Bootstrap
