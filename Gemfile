@@ -13,13 +13,16 @@ gem 'uglifier', '>= 1.3.0'
 gem 'twitter-bootstrap-rails'
 gem 'will_paginate-bootstrap'
 
+# Attachments
+gem 'dm-paperclip'
+
 # General
 gem 'mysql'
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'will_paginate', git: 'https://github.com/mislav/will_paginate.git', branch: :master
 
 # Datamapper
-%w{active_model aggregates constraints core do-adapter migrations mysql-adapter rails timestamps transactions}.each do |dm_gem|
+%w{active_model aggregates constraints core do-adapter migrations mysql-adapter rails timestamps transactions validations}.each do |dm_gem|
   gem "dm-#{dm_gem}", :git => "https://github.com/datamapper/dm-#{dm_gem}.git", :branch => 'release-1.2'
 end
 

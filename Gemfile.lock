@@ -86,6 +86,14 @@ GIT
       dm-core (~> 1.2.0)
 
 GIT
+  remote: https://github.com/datamapper/dm-validations.git
+  revision: b6542e79bb2ea022241ee8cf1e861153824ffda4
+  branch: release-1.2
+  specs:
+    dm-validations (1.2.0)
+      dm-core (~> 1.2.0)
+
+GIT
   remote: https://github.com/mislav/will_paginate.git
   revision: 623e9c5390998a2aca283bca28009f7d479d5f0f
   branch: master
@@ -137,15 +145,19 @@ GEM
       addressable (~> 2.1)
     database_cleaner (1.3.0)
     diff-lcs (1.2.5)
+    dm-paperclip (2.5.0)
+      dm-core (>= 1.2.0)
+      dm-migrations (>= 1.2.0)
+      dm-validations (>= 1.2.0)
+      extlib
     dm-rspec (0.2.4)
       dm-core
       dm-validations
-    dm-validations (1.2.0)
-      dm-core (~> 1.2.0)
     do_mysql (0.10.14)
       data_objects (= 0.10.14)
     erubis (2.7.0)
     execjs (2.2.1)
+    extlib (0.9.16)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.4.1)
@@ -291,10 +303,12 @@ DEPENDENCIES
   dm-do-adapter!
   dm-migrations!
   dm-mysql-adapter!
+  dm-paperclip
   dm-rails!
   dm-rspec
   dm-timestamps!
   dm-transactions!
+  dm-validations!
   factory_girl_rails
   faker
   jquery-rails
