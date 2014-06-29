@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-lg-6">
+    <%= form_for @photo, :html => {:multipart => true, class: "form-signin"} do |f| %>
+      <% if @photo.errors.any? %>
+        <div class="alert alert-danger" id="error_explanation">
+          <h2>
+            <%= "#{pluralize(@photo.errors.count, "error")} prohibited this photo from being saved:" %>
+          </h2>
+          <ul>
+            <% @photo.errors.full_messages.each do |msg| %>
+              <li>
+                <%= msg %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="field">
+        <%= f.text_field :title, {class: "form-control", placeholder: "Title"} %>
+      </div>
+      <div class="field">
+        <%= f.text_area :description, {class: "form-control input-sm", placeholder: "Description"} %>
+      </div>
+      <div class="field">
+        <%= f.file_field :picture %>
+      </div>
+      <div class="actions">
+        <%= f.submit 'Save', class: "btn btn-primary btn-block" %>
+      </div>
+    <% end %>
+  </div>
+</div>

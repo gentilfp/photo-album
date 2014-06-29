@@ -20,4 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  photos:
+    successfully_created: "Photo successffully created."
+    error_on_creating: "Photo could not be created"
+    successfully_updated: "Photo successfully updated"
+    error_on_editing: "Photo could not be updated"
+    successfully_deleted: "Photo successfully deleted"
+    error_on_deleting: "Photo could not be deleted"
