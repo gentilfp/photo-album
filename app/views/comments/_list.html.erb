@@ -1,0 +1,16 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    #<%= @photo.comments.count %> comments
+  </div>
+  <table class="table table-striped">
+    <tbody>
+      <% @photo.comments.each do |comment| %>
+        <tr>
+          <td>
+            <%= comment.content %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
