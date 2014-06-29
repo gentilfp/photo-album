@@ -1,3 +1,4 @@
+Paperclip.options[:command_path] = '/usr/local/bin' 
 Paperclip.configure do |config|
   config.root               = Rails.root # the application root to anchor relative urls (defaults to Dir.pwd)
   config.env                = Rails.env  # server env support, defaults to ENV['RACK_ENV'] or 'development'
