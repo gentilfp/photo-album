@@ -14,7 +14,7 @@ gem 'twitter-bootstrap-rails'
 gem 'will_paginate-bootstrap'
 
 # General
-gem 'mysql2'
+gem 'mysql'
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'will_paginate', git: 'https://github.com/mislav/will_paginate.git', branch: :master
 

@@ -175,7 +175,7 @@ GEM
     mini_portile (0.6.0)
     minitest (4.7.5)
     multi_json (1.10.1)
-    mysql2 (0.3.16)
+    mysql (2.9.1)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     polyglot (0.3.5)
@@ -300,7 +300,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   less-rails
-  mysql2
+  mysql
   pry
   pry-nav
   pry-rails
