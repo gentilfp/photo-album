@@ -21,7 +21,7 @@ class PhotosController < ApplicationController
     @photo = Photo.new(params[:photo])
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to photos_path, notice: t('photos.successfully_created') }
+        format.html { redirect_to photo_path @photo, notice: t('photos.successfully_created') }
       else
         format.html { redirect_to new_photo_path, notice: t('photos.error_on_creating') }
       end

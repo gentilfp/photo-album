@@ -1,16 +1,19 @@
-<p id="notice">
-  <%= notice %>
-</p>
-<p>
-  <%= image_tag @photo.picture.url(:medium) %>
-</p>
-<p>
-  <b>Title:</b>
-  <%= @photo.title %>
-</p>
-<p>
-  <b>Description:</b>
-  <%= @photo.description %>
-</p>
-<%= link_to 'Edit', edit_photo_path(@photo) %>
-<%= link_to 'Back', photos_path %>
+<div class="show-picture">
+  <p id="notice">
+    <%= notice %>
+  </p>
+  <p>
+    <%= image_tag @photo.picture.url(:medium) %>
+  </p>
+  <p>
+    <b>Title:</b>
+    <%= @photo.title %>
+  </p>
+  <p>
+    <b>Description:</b>
+    <%= @photo.description %>
+  </p>
+
+  <%= link_to 'Edit', edit_photo_path(@photo), class: "btn btn-large btn-primary" %>
+  <%= link_to 'Back', photos_path, class:"btn btn-large btn-danger" %>
+</div>
