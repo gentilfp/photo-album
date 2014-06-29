@@ -162,6 +162,7 @@ GEM
       dm-validations
     do_mysql (0.10.14)
       data_objects (= 0.10.14)
+    docile (1.1.5)
     erubis (2.7.0)
     execjs (2.2.1)
     extlib (0.9.16)
@@ -258,6 +259,13 @@ GEM
     simple_form (3.0.2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
+    simplecov (0.8.2)
+      docile (~> 1.1.0)
+      multi_json
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
+    simplecov-rcov (0.2.3)
+      simplecov (>= 0.4.1)
     slop (3.5.0)
     spin (0.7.1)
     sprockets (2.12.1)
@@ -334,6 +342,8 @@ DEPENDENCIES
   sdoc
   shoulda-matchers
   simple_form (~> 3.0.0.rc)
+  simplecov
+  simplecov-rcov
   spin
   therubyracer
   turbolinks

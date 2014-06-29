@@ -1,5 +1,18 @@
 ENV["RAILS_ENV"] ||= 'test'
 
+require 'simplecov'
+require 'simplecov-rcov'
+
+class SimpleCov::Formatter::MergedFormatter
+  def format(result)
+     SimpleCov::Formatter::HTMLFormatter.new.format(result)
+     SimpleCov::Formatter::RcovFormatter.new.format(result)
+  end
+end
+
+SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
+SimpleCov.start 'rails'
+
 require 'database_cleaner'
 require 'dm-core'
 require 'dm-migrations'
@@ -17,6 +30,7 @@ require 'capybara/rails'
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 RSpec.configure do |config|
+  config.infer_spec_type_from_file_location!
 
   # The settings below are suggested to provide a good initial experience
   # with RSpec, but feel free to customize to your heart's content.

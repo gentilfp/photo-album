@@ -45,6 +45,8 @@ group :development, :test do
   gem 'spin', require: false
   gem 'webmock', '1.11.0', require: false
   gem 'yard'
+  gem 'simplecov'
+  gem 'simplecov-rcov'
 end
 
 group :doc do
