@@ -17,6 +17,10 @@ gem 'will_paginate-bootstrap'
 # Attachments
 gem 'dm-paperclip'
 
+# elastic search
+gem 'elasticsearch-rails'
+gem 'elasticsearch-model'
+
 # General
 gem 'mysql'
 gem 'simple_form', '~> 3.0.0.rc'
