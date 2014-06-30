@@ -1,28 +1,19 @@
-== README
+Create a simple rails app that allows a user to upload a picture.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The picture model will allow for a title and a description.
 
-Things you may want to cover:
+The model should be created using the datamapper gem.
 
-* Ruby version
+This application should allow the user to see an index of all the pictures they have uploaded in a paginated fashion.
 
-* System dependencies
+There should be a show page for each picture.
 
-* Configuration
+Each picture may allow comments to be added to it on the show page.
 
-* Database creation
+The comment should be created with ajax without leaving the show page.
 
-* Database initialization
+After saving each comment, the title, description, and id, should all be stored in elastic search.
 
-* How to run the test suite
+When viewing a pictures show page, there should be a link to "show comments".
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This link will load the comments via ajax from elastic search and display them.
