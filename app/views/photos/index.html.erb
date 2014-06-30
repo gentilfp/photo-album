@@ -1,22 +1,32 @@
 <div class="col-lg-12">
-  <h1 class="title">Photos</h1>
+  <h1 class="title">
+    <%= t('labels.welcome') %>
+    <%= link_to t('buttons.upload'), new_photo_path, class:"btn btn-large btn-success" %>
+  </h1>
   <% if @photos.any? %>
+    <br/>
     <table class="table table-striped table-condensed">
       <tbody>
         <tr>
-          <th>Photo</th>
-          <th>Title</th>
-          <th>Description</th>
-          <th>Actions</th>
+          <th><%= t('header.photo') %></th>
+          <th><%= t('header.title') %></th>
+          <th><%= t('header.description') %></th>
+          <th><%= t('header.number_comments') %></th>
+          <th><%= t('header.actions') %></th>
         </tr>
         <% @photos.each do |photo| %>
           <tr id="photo">
-            <td><%= link_to image_tag(photo.picture.url(:medium)), photo %></td>
+            <td><%= link_to image_tag(photo.picture.url(:thumb)), photo %></td>
             <td><%= photo.title %></td>
             <td><%= photo.description %></td>
+            <td><%= photo.comments.count %></td>
             <td>
-              <%= link_to 'Edit', edit_photo_path(photo) %>
-              <%= link_to 'Delete', photo, :method => :delete, :data => { :confirm => t('helpers.links.confirm') } %>
+              <%= link_to t('buttons.show'), photo, class:"btn btn-medium btn-primary" %>
+              <%= link_to t('buttons.edit'), edit_photo_path(photo), class:"btn btn-medium btn-primary" %>
+              <%= link_to t('buttons.delete'), photo,
+                  method: :delete,
+                  data: { confirm: t('helpers.links.confirm') },
+                  class:"btn btn-medium btn-primary" %>
             </td>
           </tr>
         <% end %>
@@ -24,9 +34,7 @@
       <%= will_paginate @photos  %>
     </table>
   <% else  %>
-    <h2 class="h2 well">No Photos :-(</h2>
+    <h2 class="h2 well centered"><%= t('labels.no_photos') %></h2>
   <% end %>
-  <br>
-    <%= link_to 'Upload', new_photo_path, class:"btn btn-large btn-success" %>
   </br>
 </div>

@@ -12,7 +12,7 @@ class Photo
   property :picture_file_size, Integer
   property :picture_updated_at, DateTime
 
-  has_attached_file :picture, styles: { medium: "400x400>", thumb: "100x100>" }
+  has_attached_file :picture, styles: { medium: "700x700>", thumb: "150x150>" }
 
   validates_presence_of :title
   validates_presence_of :description

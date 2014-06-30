@@ -1,20 +1,6 @@
-<div class="row">
+<div class="row centered">
   <div class="col-lg-6">
     <%= form_for @photo, :html => {:multipart => true, class: "form-signin"} do |f| %>
-      <% if @photo.errors.any? %>
-        <div class="alert alert-danger" id="error_explanation">
-          <h2>
-            <%= "#{pluralize(@photo.errors.count, "error")} prohibited this photo from being saved:" %>
-          </h2>
-          <ul>
-            <% @photo.errors.full_messages.each do |msg| %>
-              <li>
-                <%= msg %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
       <div class="field">
         <%= f.text_field :title, {class: "form-control", placeholder: "Title"} %>
       </div>
@@ -22,11 +8,11 @@
         <%= f.text_area :description, {class: "form-control input-sm", placeholder: "Description"} %>
       </div>
       <div class="field">
-        <%= f.file_field :picture %>
+        <%= f.file_field :picture, {class: "bla"} %>
       </div>
       <br/>
-      <%= f.submit 'Save', class: "btn btn-large btn-primary" %>
-      <%= link_to 'Back', photos_path, class:"btn btn-large btn-danger" %>
+      <%= f.submit t('buttons.save'), class: "btn btn-large btn-primary" %>
+      <%= link_to t('buttons.back'), photos_path, class:"btn btn-large btn-danger" %>
     <% end %>
   </div>
 </div>

@@ -1,22 +1,19 @@
-<div class="show-picture">
-  <p id="notice">
-    <%= notice %>
-  </p>
+<div class="centered">
+  <p id="notice"><%= notice %></p>
+  <p><%= image_tag @photo.picture.url(:medium) %></p>
   <p>
-    <%= image_tag @photo.picture.url(:medium) %>
-  </p>
-  <p>
-    <b>Title:</b>
+    <b><%= t('header.title')%>:</b>
     <%= @photo.title %>
   </p>
   <p>
-    <b>Description:</b>
+    <b><%= t('header.description') %>:</b>
     <%= @photo.description %>
   </p>
 
-  <%= link_to 'Edit', edit_photo_path(@photo), class: "btn btn-large btn-primary" %>
-  <%= link_to 'Back', photos_path, class:"btn btn-large btn-danger" %>
+  <%= link_to t('buttons.edit'), edit_photo_path(@photo), class: "btn btn-large btn-primary" %>
+  <%= link_to t('buttons.back'), photos_path, class:"btn btn-large btn-danger" %>
 
+  <!-- List comments -->
   <div class="row" id="list">
     <%= render 'comments/list', object: @comment %>
   </div>

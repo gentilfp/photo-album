@@ -1,24 +1,3 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   photos:
     successfully_created: "Photo successffully created."
@@ -27,3 +6,23 @@ en:
     error_on_editing: "Photo could not be updated"
     successfully_deleted: "Photo successfully deleted"
     error_on_deleting: "Photo could not be deleted"
+  header:
+    photo: "Photo"
+    title: "Title"
+    description: "Description"
+    number_comments: "# Comments"
+    actions: "Actions"
+  labels:
+    new_photo: "Upload your photo here!"
+    welcome: "Welcome to PhotoAlbum!"
+    no_photos: "WOW! It looks like you don't have photos yet"
+    edit: "Edit here your photo"
+    comment: "Your comments goes here..."
+  buttons:
+    upload: "Upload your picture now!"
+    show: "Show"
+    save: "Save"
+    edit: "Edit"
+    delete: "Delete"
+    back: "List of photos"
+    post: "Post comment"
